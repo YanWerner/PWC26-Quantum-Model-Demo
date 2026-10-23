@@ -1,0 +1,9 @@
+# Generative Models Academy (PWC26) – install with: pip install -r requirements.txt
+numpy
+pandas
+matplotlib
+scipy            # used by notebooks 01 and 02 (KS test)
+scikit-learn
+tqdm
+torch
+pennylane>=0.45  # IQGAN notebook uses qml.set_shots (tested with 0.45.1)
