@@ -16,12 +16,7 @@ A Jupyter notebook that trains a small quantum generative model (IQGAN-style: a 
 4. **Training**: the generator loss is the probability of measuring 1 on the ancilla; its complement, the probability of measuring 0, is the fidelity between generated and real patient. Adam optimizer with a cosine learning-rate schedule; the best generator weights are kept in memory.
 5. **Loss plot** of the generator loss during training.
 6. **A generated patient**: the trained generator's output mapped back through the inverse PCA and inverse scaling to the 30 clinical features, shown next to the mean and standard deviation of the real malignant patients.
-7. **Shot-noise chapter**: simulates the generator as a real quantum computer would run it. Each feature is estimated from a finite number of measurements (shots) with `qml.sample` and `qml.set_shots`. It compares
-   - one patient generated with 100 shots vs. the exact output,
-   - 200 generated patients for 1, 10, 100, 1000 and 10000 shots, plotted on the first two principal components with the real patients,
-   - the spread of the generated patients vs. the number of shots, together with the theoretical `√(p(1−p)/N)` curve and the spread of the real patients.
 
-**Key observation:** the exact generator is deterministic and always produces the same single patient. With finite shots, the only variation between generated patients is measurement noise around that one patient, and it shrinks as `1/√N`.
 
 ## Installation
 
@@ -38,8 +33,6 @@ or, from the first cell of the notebook (same folder):
 ```
 
 PennyLane **0.45 or newer** is required (the shot-noise chapter uses `qml.set_shots`). The dataset ships with scikit-learn, so no download is needed.
-
-**GPU (optional):** if CUDA is available, the notebook uses PennyLane's `lightning.gpu` device. That device needs the separate `pennylane-lightning-gpu` package, which is not in `requirements.txt`. On CPU the notebook uses `default.qubit` and needs nothing extra.
 
 ## Running
 
