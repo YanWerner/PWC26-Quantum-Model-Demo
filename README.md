@@ -2,7 +2,7 @@
 
 A Jupyter notebook that trains a small quantum generative model (IQGAN-style: a quantum generator with a fixed swap-test discriminator) on tabular medical data, and shows what the trained generator actually produces, both exactly and with simulated shot noise.
 
-**Notebook:** `IQGAN_breast_cancer.ipynb`
+**Notebook:** `QGAN_Demo.ipynb`
 
 ## What the notebook does
 
