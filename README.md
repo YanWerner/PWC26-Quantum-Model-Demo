@@ -56,3 +56,7 @@ With 212 malignant patients, one epoch is only 7 batches, so the default 10 epoc
 
 - Generated features are mapped back through the inverse PCA. Because only `k` components are kept, some reconstructed clinical values can fall outside the physically possible range (e.g. slightly negative measurements), especially when the generator is not fully trained.
 - The x-axis label of the loss plot says "logged every 40 batches". With this dataset the loss is logged on the last batch of each epoch, so effectively once per epoch.
+
+## Additional Reading
+
+- Check out the PennyLane QGAN Demo page: https://pennylane.ai/demos/tutorial_quantum_gans
