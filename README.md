@@ -15,7 +15,7 @@ A Jupyter notebook that trains a small quantum generative model (IQGAN-style: a 
 3. **Circuit drawing** of the full IQGAN circuit.
 4. **Training**: the generator loss is the probability of measuring 1 on the ancilla; its complement, the probability of measuring 0, is the fidelity between generated and real patient. Adam optimizer with a cosine learning-rate schedule; the best generator weights are kept in memory.
 5. **Loss plot** of the generator loss during training.
-6. **A generated patient**: the trained generator's output mapped back through the inverse PCA and inverse scaling to the 30 clinical features, shown next to the mean and standard deviation of the real malignant patients.
+6. **Hands on**: Compare the generated data from IQGAN to mean samping.
 
 
 ## Installation
